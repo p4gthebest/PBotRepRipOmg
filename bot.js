@@ -1,6 +1,6 @@
 const Discord = require('discord.js');
 const client = new Discord.Client();
-const prefix = '~'
+const prefix = '>'
 const ms = require("ms");
 const ownerID = '391665977949028363'
 
