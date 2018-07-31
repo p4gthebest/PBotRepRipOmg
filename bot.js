@@ -527,7 +527,9 @@ client.on('message', async message => {
     .setColor("RANDOM")
     .setFooter('React To Vote.')
     .setDescription(`
-    **${args}**
+● ▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬ ●
+    ❤️ Vote Now : **${args}**
+● ▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬ ●
     `)
     .setTitle(`Vote Yes Or No`);
     
