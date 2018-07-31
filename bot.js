@@ -494,7 +494,7 @@ client.on('message', function(msg) {
     
     ❤️ **Welcome/Leaving System** : A simple welcome / leaving system in a certain text channel
     
-    ❤️ **Welcome in Dm System** : A Sime Welcome in Dm system
+    ❤️ **Welcome in Dm System** : A Simple Welcome in Dm system
     
     ❤️ **AutoRole System** : A simple autorole, when a member join the server will be given a certain role
     
@@ -527,7 +527,7 @@ client.on('message', async message => {
     .setColor("RANDOM")
     .setFooter('React To Vote.')
     .setDescription(`**${args}**`)
-    .setTitle(`@everyone Vote Yes Or No`);
+    .setTitle(`Vote Yes Or No`);
     
 
     let vchannel = message.guild.channels.find('name', '﹄vote﹃')
