@@ -38,9 +38,9 @@ client.on('message', function(msg) {
     let cmd = messagearray[0];
     let args = messagearray.slice(1);
     let Ruser = msg.guild.member(msg.mentions.users.first() || msg.guild.members.get(args[0]));
-    if(!Ruser) return msg.channel.send("**لم نستطع ايجاد العضو**");
+    if(!Ruser) return msg.channel.send("**Sorry, but i cant find the member**");
     let Rreason = args.join(" ").slice(22);
-    if(!Rreason) return msg.channel.send("**الرجاء كتابة السبب**");
+    if(!Rreason) return msg.channel.send("**Please, can u tell us the reason**");
   
     let Rembed = new Discord.RichEmbed()
     .setColor("RANDOM")
@@ -570,7 +570,40 @@ client.on('guildMemberAdd', member => {
     let role = member.guild.roles.find('name', '- Member')
     member.addRole(role);
 
-    member.send("I Hope u enjoy our server <3")
+    member.send(`
+|-------------------------------------|
+1- لا تسب و تقول كلام وحش
+
+2-لا تسوي سبام
+
+3- لا تنشر على الشات او الخاص
+
+4- لا تزعج الناس او تستخدم برامج تغيير الصوت
+
+5- احترام الجميع
+
+6- عندما تطلب المساعدة يرجي عدم عمل سبام او توجه الى Support Waiting Room 
+
+7- استخدام الاوامر فقط في روم #﹄commands﹃ 
+
+8- لا تتعالي علي الاعضاء برتبتك
+
+9 - اذا عندك رتبة لا تستخدمها بشكل سيء وخاصة الادارة 
+
+10 - لا تعطي رتبه لاحد بدون استاذان اتكلم عن الادارة
+
+11 - الاعضاء زيهم زيك الفرق بس ان رتبتك اعلي
+
+12 - لا تطلب رتب ادارية نحن نشوف المتفاعلين نعطيهم رتب ادارية 
+
+|-------------------------------------|
+
+اي مخالفة لاحد القوانين يعرضك للبان او الميوت 
+
+اذا شفت احد قام بمخالفة احد القوانين الرجاء كتابة >report name reason
+
+
+`)
 });
 
 client.on('guildMemberRemove', member => {
