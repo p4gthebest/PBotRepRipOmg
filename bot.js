@@ -186,7 +186,7 @@ var bc = new Discord.RichEmbed()
 
 ❤️Sender : **${message.author.username}**
 
-❤️Message : **[${args}]**
+❤️Message : **${args}**
 ● ▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬ ●
 
 
@@ -526,7 +526,9 @@ client.on('message', async message => {
         const embed = new Discord.RichEmbed()
     .setColor("RANDOM")
     .setFooter('React To Vote.')
-    .setDescription(`**${args}**`)
+    .setDescription(`
+    **${args}**
+    `)
     .setTitle(`Vote Yes Or No`);
     
 
