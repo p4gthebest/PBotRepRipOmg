@@ -566,9 +566,9 @@ client.on('message', message => {
 client.on('guildMemberAdd', member => {
     let channel = member.guild.channels.find('name', '﹄welcome﹃')
     if(!channel) return;
-    let year = message.author.createdAt.getFullYear()
-    let month = message.author.createdAt.getMonth()
-    let day = message.author.createdAt.getDate()
+    let year = member.createdAt.getFullYear()
+    let month = member.createdAt.getMonth()
+    let day = member.createdAt.getDate()
     channel.send(member.user + " has joined the server! First Join to discord : "  + year + month + day);
     let role = member.guild.roles.find('name', '- Member')
     member.addRole(role);
